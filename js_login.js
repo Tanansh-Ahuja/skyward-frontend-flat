@@ -27,7 +27,7 @@ document.getElementById('login-form').addEventListener('submit', async (e) => {
     localStorage.setItem('user', JSON.stringify(data.user));
 
     // Redirect to dashboard or homepage
-    window.location.href = '/pages_admin_dashboard.html';
+    window.location.href = 'pages_admin_dashboard.html';
   } catch (err) {
     document.getElementById('error-msg').textContent = 'Server error';
     console.error(err);
