@@ -1,0 +1,71 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  background-color: #302430; /* Thunder */
+  color: #d6d2b4; /* Chino */
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  height: auto;
+  margin-right: 8px;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  font-size: 24px;
+  color: #d6d2b4; /* Chino */
+  border: none;
+}
+
+.navbar-right a {
+  margin-left: 16px;
+  color: #e19f31; /* Fire Bush */
+  text-decoration: none;
+}
+
+.navbar-right a:hover {
+  color: #8d0f0e; /* Tamarillo */
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-right {
+    display: none;
+    flex-direction: column;
+    background-color: #302430;; /* Or use #302430 (Thunder) from your scheme */
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 999;
+  }
+
+  .navbar-right.show {
+    display: flex;
+  }
+
+  .navbar-right a {
+    padding: 10px 16px;
+    color: d6d2b4;
+    text-decoration: none;
+    font-size: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .navbar-right a:first-child {
+    border-top: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
