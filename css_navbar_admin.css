@@ -1,0 +1,135 @@
+/* === General Styles === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* === Admin Navbar === */
+.admin-navbar {
+  background-color: #302430; /* Thunder */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+
+/* Left Section: Logo and Brand */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 40px;
+}
+
+.brand-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Hamburger Button */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Navbar Links Wrapper */
+.navbar-links {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  flex-grow: 1;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+/* Nav Sections */
+.nav-section {
+  position: relative;
+}
+
+/* Main Headings */
+.nav-heading {
+  font-weight: bold;
+  color: #e19f31; /* Fire Bush */
+  cursor: pointer;
+  padding: 6px 0;
+}
+
+/* Subheadings (initially hidden) */
+.nav-subheadings {
+  position: absolute;
+  top: 100%; /* appear below the heading */
+  left: 0;
+  background-color: #302430; /* Thunder */
+  display: none;
+  flex-direction: column;
+  padding: 10px;
+  z-index: 10;
+  border: 1px solid #8d0f0e; /* Tamarillo border */
+}
+
+.nav-subheadings a {
+  display: block;  /* ensure each link occupies full line */
+  text-decoration: none;
+  color: #d6d2b4; /* Chino */
+  padding: 5px 0;
+}
+
+.nav-subheadings a:hover{
+    text-decoration: dashed;
+    color: #e19f31;
+}
+
+/* Show subheadings when toggled */
+.nav-subheadings.show {
+  display: flex;
+}
+
+/* Logout link */
+#logout-link {
+  color: #e19f31;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 0;
+}
+
+/* === Responsive Styles === */
+@media (max-width: 980px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navbar-links.show {
+    display: flex;
+  }
+
+  .nav-section {
+    width: 100%;
+  }
+
+  .nav-subheadings {
+    padding-left: 15px;
+  }
+}
