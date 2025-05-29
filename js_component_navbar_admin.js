@@ -1,3 +1,30 @@
+import { API_BASE_URL } from './js_config.js';
+document.addEventListener('DOMContentLoaded', async () => {
+    const token = localStorage.getItem('token');
+        if (!token) {
+            window.location.href = 'login.html';
+            return;
+        }
+        try {
+            const verifyRes = await fetch(`${API_BASE_URL}/utils/verify-token`, {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+            });
+
+            if (!verifyRes.ok) {
+            localStorage.removeItem('token');
+            localStorage.removeItem('user');
+            window.location.href = 'login.html';
+            return;
+            }
+        }
+        catch (err) {
+        console.error('Token check failed', err);
+        window.location.href = 'login.html';
+    }
+});
+
 document.addEventListener('DOMContentLoaded', async () => {
   const placeholder = document.getElementById('navbar-placeholder');
   if (!placeholder) return;
