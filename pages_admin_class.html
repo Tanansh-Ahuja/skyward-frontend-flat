@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Skyward | Classes</title>
+  <link rel="stylesheet" href="css_navbar_admin.css" />
+  <link rel="stylesheet" href="css_admin_class.css">
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+  <div class="container">
+    <div class="page-header">
+        <h1>Classes</h1>
+        <button id="create-class-btn">Create Class</button>
+    </div>
+
+    <!-- Popup Form -->
+    <div id="popup-form" class="modal hidden">
+        <div class="modal-content">
+        <h2>Create New Class</h2>
+        <label for="grade">Grade:</label>
+        <select id="grade">
+            <option disabled selected>Select Grade</option>
+        </select>
+
+        <label for="section">Section:</label>
+        <select id="section">
+            <option disabled selected>Select Section</option>
+        </select>
+
+        <label for="class_name">Class Name:</label>
+        <input type="text" id="class_name" readonly>
+
+        <button id="submit-class">Submit</button>
+        <button id="cancel-btn">Cancel</button>
+        </div>
+    </div>
+
+    <div id="class-list">
+        <!-- Fetched classes will be rendered here -->
+    </div>
+
+  </div>
+  
+  <script type="module" src="js_component_navbar_admin.js"></script>
+  <script type="module" src="js_admin_class.js"></script>
+</body>
+</html>
