@@ -1,0 +1,174 @@
+html{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 1rem;
+}
+
+main {
+  padding: 1rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.header-row {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  color: #302430; /* Thunder */
+  margin: 0;
+}
+
+#create-session-btn {
+  background-color: #302430; /* Thunder */
+  color: white;
+  padding: 0.6rem 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#create-session-btn:hover {
+  background-color: #211821;
+}
+
+/* Modal */
+.modal.hidden {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 320px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  color: #302430;
+}
+
+.modal-content label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.2rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.modal-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-actions button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.modal-actions button[type="submit"] {
+  background-color: #e19f31; /* Fire Bush */
+  color: white;
+}
+
+#close-modal {
+  background-color: #8d0f0e; /* Tamarillo */
+  color: white;
+}
+
+/* Session Cards */
+.session-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.session-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.session-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.session-card strong {
+  color: #302430;
+  font-size: 1.05rem;
+}
+
+.session-card div:nth-of-type(2) {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #8d0f0e; /* Tamarillo */
+}
+
+.card-buttons {
+  margin-top: 1rem;
+}
+
+.card-buttons button {
+  padding: 0.4rem 0.9rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.edit-btn {
+  background-color: #e19f31; /* Fire Bush */
+  color: #fff;
+}
+
+.edit-btn:hover {
+  background-color: #d18c1f;
+}
+
+.delete-btn {
+  background-color: #8d0f0e; /* Tamarillo */
+  color: #fff;
+}
+
+.delete-btn:hover {
+  background-color: #6e0a0a;
+}

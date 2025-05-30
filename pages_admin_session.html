@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard - Sessions</title>
+  <link rel="stylesheet" href="css_navbar_admin.css" />
+  <link rel="stylesheet" href="css_admin_session.css" />
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <main>
+    <div class="header-row">
+      <h1>Academic Sessions</h1>
+      <button id="create-session-btn">+ Create New Session</button>
+    </div>
+    <div id="session-container" class="session-container"></div>
+  </main>
+
+  <!-- Modal -->
+  <div id="session-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Create New Session</h2>
+      <form id="session-form">
+        <label>Session Name:
+          <input type="text" id="session-name" required />
+        </label>
+        <label>Start Date:
+          <input type="date" id="start-date" required />
+        </label>
+        <label>End Date:
+          <input type="date" id="end-date" required />
+        </label>
+        <div class="modal-actions">
+          <button type="submit">Create</button>
+          <button type="button" id="close-modal">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="js_component_navbar_admin.js"></script>
+  <script type="module" src="js_admin_session.js"></script>
+</body>
+</html>
