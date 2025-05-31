@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard - Subjects</title>
+  <link rel="stylesheet" href="css_navbar_admin.css" />
+  <link rel="stylesheet" href="css_admin_subjects.css" />
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <div class="page-container">
+
+    <!-- SECTION 1: Subjects -->
+    <section class="subject-section">
+      <div class="section-header">
+        <h2>All Subjects</h2>
+        <button id="add-subject-btn">+ Add Subject</button>
+      </div>
+      <div id="subjects-container" class="subjects-grid"></div>
+    </section>
+
+    <!-- POPUP: Add Subject Modal -->
+    <div id="subject-popup" class="modal hidden">
+      <div class="modal-content">
+        <h3>Add New Subject</h3>
+        <input type="text" id="new-subject-name" placeholder="Enter subject name" />
+        <div class="modal-actions">
+          <button id="submit-subject">Add</button>
+          <button id="cancel-subject">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 2: Mapping Summary -->
+    <section class="mapping-section">
+      <div class="section-header">
+        <h2>Subject-Class Mapping Summary</h2>
+      </div>
+      <div id="mapping-summary-container" class="mapping-summary-grid"></div>
+    </section>
+
+    <!-- SECTION 3: Map Subjects to Grade -->
+    <section class="mapping-manage-section">
+      <div class="section-header">
+        <h2>Map Subjects to Grade</h2>
+      </div>
+
+      <div class="mapping-form">
+        <label for="grade-select" class="form-label">Select Grade:</label>
+        <select id="grade-select" class="grade-select">
+          <option value="">-- Select Grade --</option>
+          <!-- Grades will be added dynamically -->
+        </select>
+      </div>
+
+
+      <div id="subject-checkbox-container" class="checkbox-container">
+        <!-- Subject checkboxes will go here -->
+      </div>
+
+      <button id="submit-mapping-btn" style="display: none;">Map Selected Subjects</button>
+    </section>
+  </div>
+
+  <script type="module" src="js_component_navbar_admin.js"></script>
+  <script type="module" src="js_admin_subjects.js"></script>
+</body>
+</html>

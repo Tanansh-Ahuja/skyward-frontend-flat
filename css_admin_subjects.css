@@ -1,0 +1,269 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f6f5f0;
+  color: #302430;
+  margin: 0;
+  padding: 0;
+}
+
+.page-container {
+  padding: 20px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.section-header h2 {
+  color: #8d0f0e;
+}
+
+button {
+  background-color: #e19f31;
+  border: none;
+  padding: 8px 12px;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #c8821c;
+}
+
+.subjects-grid{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+/* Grid container for subject cards */
+#subjects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* responsive grid */
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+/* Each subject card */
+.subject-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 250px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Subject name */
+.subject-card span {
+  font-size: 1rem;
+  color: #302430; /* Thunder */
+  font-weight: 500;
+}
+
+/* Delete button */
+.subject-card button.delete-subject {
+  background-color: #8d0f0e; /* Tamarillo */
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.subject-card button.delete-subject:hover {
+  background-color: #6e0c0b;
+}
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal.hidden {
+    display: none;
+  }
+
+.modal-content {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 10px;
+  width: 320px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-family: Arial, sans-serif;
+}
+
+/* Style for the input */
+.modal-content input[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.modal-content input[type="text"]:focus {
+  outline: none;
+  border-color: #8d0f0e; /* Tamarillo */
+  box-shadow: 0 0 0 2px rgba(141, 15, 14, 0.2);
+}
+
+/* Modal header */
+.modal-content h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #302430; /* Thunder */
+}
+
+  .modal-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+
+
+  /* Add button (primary action) */
+#submit-subject {
+  background-color: #8d0f0e; /* Tamarillo */
+  color: white;
+}
+
+#submit-subject:hover {
+  background-color: #6e0c0b;
+}
+
+/* Cancel button (neutral action) */
+#cancel-subject {
+  background-color: #ccc;
+  color: #302430;
+}
+
+#cancel-subject:hover {
+  background-color: #bbb;
+}
+
+
+/*///////////////////////////////////////////*/
+/*///////////View Mappings///////////////*/
+/*///////////////////////////////////////////*/
+.mapping-manage-section{
+  margin-top: 2rem;
+}
+
+ .mapping-form {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 10px;
+  }
+
+  .mapping-summary-grid{
+    display: block;
+  }
+
+
+.mapping-summary-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  margin: 6px 0;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-family: Arial, sans-serif;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+}
+
+.mapping-summary-card strong {
+  color: #302430; /* Thunder from your palette */
+}
+
+.mapping-summary-card em {
+  color: #8d0f0e; /* Tamarillo */
+}
+
+
+/*///////////////////////////////////////////*/
+/*///////////Subject Checkbox view///////////////*/
+/*///////////////////////////////////////////*/
+
+.mapping-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+}
+
+.form-label {
+  font-weight: bold;
+  color: #302430; /* Thunder */
+  font-size: 16px;
+}
+
+.grade-select {
+  padding: 8px 12px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);
+  color: #302430;
+  max-width: 220px;
+}
+
+
+
+/* Container for checkboxes */
+.checkbox-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* Each checkbox "tile" */
+.subject-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px 14px;
+  min-width: 140px;
+  font-size: 14px;
+  color: #302430; /* Skyward's 'Thunder' */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.subject-checkbox:hover {
+  background-color: #ececec;
+}
+
+.subject-checkbox input[type="checkbox"] {
+  transform: scale(1.2);
+  accent-color: #8d0f0e; /* Skyward's 'Tamarillo' */
+}
+
