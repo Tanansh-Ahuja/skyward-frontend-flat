@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Teacher Management</title>
+  <link rel="stylesheet" href="css_navbar_admin.css" />
+  <link rel="stylesheet" href="css_admin_teachers.css" />
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+  <div class="container">
+    <h1>Register a Teacher</h1>
+
+    <form id="teacher-form">
+        <input type="hidden" id="user-id" />
+        <label>Name: <input type="text" id="name" required /></label>
+        <label>Email: <input type="email" id="email" /></label>
+        <label>Mobile: <input type="text" id="mobile" required /></label>
+        <label>Password: <input type="password" id="password" required /></label>
+        
+        <label class="inline-label">
+            Is Class Teacher? 
+            <input type="checkbox" id="is-class-teacher" />
+        </label>
+
+        <label>
+        Class:
+        <select id="class-id">
+            <option value="">-- Select Class --</option>
+        </select>
+        </label>
+
+        <button type="submit" id="submit-btn">Register</button>
+    </form>
+
+    <hr />
+
+    <h2>All Teachers</h2>
+    <div id="teachers-container" class="teacher-card-container"></div>
+  </div>
+  
+
+  <script type="module" src="js_component_navbar_admin.js"></script>
+  <script type="module" src="js_admin_teachers.js"></script>
+</body>
+</html>

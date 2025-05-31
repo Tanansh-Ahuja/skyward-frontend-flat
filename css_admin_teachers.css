@@ -1,0 +1,94 @@
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0px;
+  background-color: #f5f5f5;
+  color: #302430;
+}
+
+.container{
+    margin: 2rem;
+}
+
+h1, h2 {
+  color: #8d0f0e;
+  margin: 2rem 0rem;
+}
+
+form {
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  max-width: 500px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+form label {
+  display: block;
+  margin: 10px 0;
+}
+
+.inline-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+form input, form select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+#is-class-teacher{
+    width: 20%;
+}
+
+form button {
+  background-color: #e19f31;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  margin-top: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.teacher-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.teacher-card {
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.teacher-card strong {
+  color: #302430;
+}
+
+.teacher-card p {
+  margin: 6px 0;
+}
+
+.teacher-card button {
+  margin-right: 8px;
+  padding: 6px 10px;
+  background-color: #8d0f0e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.teacher-card button.update-btn {
+  background-color: #e19f31;
+}
