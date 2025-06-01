@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Class Teacher Mapping</title>
+  <link rel="stylesheet" href="css_navbar_admin.css" />
+  <link rel="stylesheet" href="css_admin_subject_teacher_mapping.css">
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+  <div class="container">
+    <h2>Assign Subject Teacher</h2>
+    <form id="assign-form">
+    <label for="class-select">Class:</label>
+    <select id="class-select" required></select>
+
+    <label for="subject-select">Subject:</label>
+    <select id="subject-select" required></select>
+
+    <label for="teacher-select">Teacher:</label>
+    <select id="teacher-select" required></select>
+
+    <button type="submit">Assign</button>
+    </form>
+
+    <h2>Current Subject Teachers</h2>
+    <div id="mapping-display"></div>
+
+    
+  </div>
+
+  <script type="module" src="js_component_navbar_admin.js"></script>
+  <script type="module" src="js_admin_subject_teacher_mapping.js"></script>
+</body>
+</html>
