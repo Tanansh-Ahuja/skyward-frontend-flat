@@ -35,16 +35,27 @@ async function fetchTeachers() {
 
 teacherForm.addEventListener("submit", async (e) => {
   e.preventDefault();
-  const payload = {
-    name: nameInput.value,
-    email: emailInput.value,
-    mobile: mobileInput.value,
-    };
 
-    // Only add password if in create mode
-    if (!userIdInput.value) {
-    payload.password = passwordInput.value;
-    }
+  // Trim values to avoid issues with spaces
+  const name = nameInput.value.trim();
+  const email = emailInput.value.trim();
+  const mobile = mobileInput.value.trim();
+  const password = passwordInput.value.trim(); // even if it’s only for create mode
+
+  // Check required fields
+  if (!name) return alert("Name field is empty");
+  
+  if (!mobile) return alert("Mobile field is empty");
+
+  // Only check password if it's a create (not update)
+  if (!userIdInput.value && !password) {
+    return alert("Password field is empty");
+  }
+  // Construct payload
+  const payload = { name, email, mobile };
+  if (!userIdInput.value) {
+    payload.password = password;
+  }
 
   const method = userIdInput.value ? "PATCH" : "POST";
   const endpoint = userIdInput.value 
@@ -90,5 +101,6 @@ async function deleteTeacher(userId) {
     }
   }
 }
+window.deleteTeacher = deleteTeacher;
 window.editTeacher = editTeacher;
 fetchTeachers();
