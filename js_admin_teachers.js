@@ -61,6 +61,7 @@ teacherForm.addEventListener("submit", async (e) => {
     alert(`Teacher ${userIdInput.value ? "updated" : "registered"} successfully.`);
     passwordInput.parentElement.style.display = 'block'; // for fresh create
     teacherForm.reset();
+    submitBtn.textContent = "Register";
     userIdInput.value = "";
     fetchTeachers();
   } else {
@@ -75,8 +76,6 @@ function editTeacher(teacher) {
   nameInput.value = teacher.name;
   emailInput.value = teacher.email;
   mobileInput.value = teacher.mobile;
-  isClassTeacherInput.checked = teacher.is_class_teacher;
-  classIdSelect.value = teacher.class_id || "";
   submitBtn.textContent = "Update Teacher";
 }
 
