@@ -25,7 +25,7 @@ document.getElementById('login-form').addEventListener('submit', async (e) => {
     // Store token and user in localStorage
     localStorage.setItem('token', data.token);
     localStorage.setItem('user', JSON.stringify(data.user));
-
+    
     // Redirect to dashboard or homepage
     window.location.href = 'pages_admin_dashboard.html';
   } catch (err) {

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile</title>
+   <link rel="stylesheet" href="css_navbar_admin.css" />
+   <link rel="stylesheet" href="css_common_profile.css" />
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+  <div class="outer-wrapper">
+    <div class="profile-container">
+        <h2>User Profile</h2>
+        <form id="profile-form">
+        <label>Name:
+            <input type="text" id="name" name="name" required disabled />
+        </label>
+        <label>Email:
+            <input type="email" id="email" name="email" disabled />
+        </label>
+        <label>Mobile:
+            <input type="text" id="mobile" name="mobile" required disabled />
+        </label>
+        <label>Password:
+            <input type="password" id="password" name="password" placeholder="Enter new password" disabled />
+        </label>
+        <button type="button" id="edit-btn">Edit</button>
+        <button type="submit" id="submit-btn" style="display:none;">Submit</button>
+        </form>
+        <p id="msg"></p>
+    </div>
+  </div>
+  
+
+  <script type="module" src="js_component_navbar_admin.js"></script>
+  <script type="module" src="js_common_profile.js"></script>
+</body>
+</html>

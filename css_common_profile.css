@@ -1,0 +1,74 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  justify-content: center;
+}
+
+/* This centers the whole profile container */
+.outer-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full screen height */
+}
+
+/* This styles the box (form card) */
+.profile-container {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 2rem auto;
+}
+
+/* Optional form styling (already decent) */
+#profile-form {
+  background: #fff;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #302430; /* Thunder */
+}
+
+form label {
+  display: block;
+  margin-bottom: 15px;
+}
+
+form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #8d0f0e; /* Tamarillo */
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #a31412;
+}
+
+#msg {
+  margin-top: 15px;
+  color: green;
+  text-align: center;
+}
