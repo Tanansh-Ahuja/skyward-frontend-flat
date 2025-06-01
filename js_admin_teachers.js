@@ -11,16 +11,6 @@ const userIdInput = document.getElementById("user-id");
 const submitBtn = document.getElementById("submit-btn");
 const teachersContainer = document.getElementById("teachers-container");
 
-async function fetchClasses() {
-  const res = await fetch(`${API_BASE_URL}/classes/`);
-  const classes = await res.json();
-  classes.forEach(cls => {
-    const option = document.createElement("option");
-    option.value = cls.class_id;
-    option.textContent = cls.class_name;
-    classIdSelect.appendChild(option);
-  });
-}
 
 async function fetchTeachers() {
   const res = await fetch(`${API_BASE_URL}/teachers/`);
@@ -49,8 +39,6 @@ teacherForm.addEventListener("submit", async (e) => {
     name: nameInput.value,
     email: emailInput.value,
     mobile: mobileInput.value,
-    is_class_teacher: isClassTeacherInput.checked,
-    class_id: classIdSelect.value || null
     };
 
     // Only add password if in create mode
@@ -104,5 +92,4 @@ async function deleteTeacher(userId) {
   }
 }
 window.editTeacher = editTeacher;
-fetchClasses();
 fetchTeachers();
