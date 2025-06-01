@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Class Teacher Mapping</title>
+  <link rel="stylesheet" href="css_navbar_admin.css" />
+  <link rel="stylesheet" href="css_admin_class_teacher_map.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+  <div class="container">
+    <h1>Class Teacher Mapping</h1><br>
+
+    <section id="class-mapping-view">
+      <h2>Current Class-Teacher Assignments</h2>
+      <div id="class-list"></div>
+    </section>
+
+    <section id="assign-teacher">
+      <!-- Section 2: Mapping form -->
+        <h3>Assign Class Teacher</h3>
+        <p id="current-session">Session: loading...</p>
+
+        <form id="map-form">
+        <label for="class-select">Select Class:</label>
+        <select id="class-select" required></select>
+
+        <label for="teacher-select">Select Teacher:</label>
+        <select id="teacher-select" required></select>
+
+        <label for="subject-select">Select Subject:</label>
+        <select id="subject-select" required></select>
+
+        <button type="submit">Assign</button>
+        </form>
+
+        <p id="mapping-msg" style="color: green;"></p>
+    </section>
+  </div>
+
+  <script type="module" src="js_component_navbar_admin.js"></script>
+  <script type="module" src="js_admin_class_teacher_map.js"></script>
+</body>
+</html>

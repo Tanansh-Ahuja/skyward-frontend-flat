@@ -1,0 +1,137 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+  color: #302430;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+  color: #8d0f0e;
+  margin-bottom: 10px;
+}
+
+#class-mapping-view {
+  margin-bottom: 40px;
+}
+
+#class-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.mapping-card {
+  background-color: #d6d2b4;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-left: 6px solid #e19f31;
+  transition: transform 0.2s ease;
+}
+
+.mapping-card:hover {
+  transform: scale(1.02);
+}
+
+.mapping-card strong {
+  color: #302430;
+}
+
+.delete-btn {
+  margin-top: 20px;
+  padding: 8px 14px;
+  font-size: 14px;
+  background-color: #8d0f0e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.mapping-card .delete-btn:hover {
+  background-color: #a21110;
+}
+
+#assign-teacher {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f0f0e6;
+  border-radius: 10px;
+  border: 1px solid #d6d2b4;
+}
+
+#assign-teacher h3 {
+  margin-bottom: 10px;
+}
+
+#current-session {
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #302430;
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #302430;
+}
+
+form select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #302430;
+}
+
+button[type="submit"] {
+  margin-top: 25px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #8d0f0e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #a21110;
+}
+
+#mapping-msg {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Responsive improvements */
+@media (max-width: 600px) {
+  .container {
+    margin: 20px 10px;
+    padding: 15px;
+  }
+
+  form select,
+  button[type="submit"] {
+    font-size: 15px;
+  }
+}
