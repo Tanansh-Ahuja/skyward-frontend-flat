@@ -123,7 +123,9 @@ function setupFormSubmission(currentSessionId) {
       mappingMsg.textContent = "Class teacher assigned successfully!";
       mappingMsg.style.color = "green";
 
-      await loadClassTeacherMappings(); // reload the list after success
+      setTimeout(() => {
+        location.reload();
+      }, 1000);
 
     } catch (err) {
       console.error(err);
