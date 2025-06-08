@@ -1,29 +1,35 @@
-// Dummy data for now — replace with API calls later
-const teacherData = {
-  isClassTeacher: true,
-  classTeacherClass: "6A",
-  subjects: [
-    { class: "6A", subject: "English" },
-    { class: "6A", subject: "GK" },
-    { class: "7B", subject: "Math" }
-  ]
+import { API_BASE_URL } from './js_config.js';
+
+window.onload = async () => {
+  const user = JSON.parse(localStorage.getItem("user"));
+
+  try {
+    const res = await fetch(`${API_BASE_URL}/teachers/me/mappings?user_id=${user.user_id}`);
+    if (!res.ok) throw new Error("Failed to fetch teacher mappings");
+
+    const data = await res.json();
+
+    renderSubjects(data.subjects);
+    if (data.isClassTeacher) {
+      renderClassTeacherSection(data.classTeacherClass);
+    }
+  } catch (err) {
+    console.error("Error loading teacher dashboard:", err);
+    alert("Something went wrong while loading your dashboard.");
+  }
 };
 
-window.onload = () => {
-  renderSubjects();
-  renderClassTeacherSection();
-};
-
-function renderSubjects() {
+function renderSubjects(subjects) {
   const container = document.getElementById("subject-teach-list");
+  container.innerHTML = "";
 
-  teacherData.subjects.forEach((item) => {
+  subjects.forEach(({ class: className, subject }) => {
     const card = document.createElement("div");
     card.className = "subject-card";
 
     card.innerHTML = `
-      <h3>${item.subject}</h3>
-      <p>Class: ${item.class}</p>
+      <h3>${subject}</h3>
+      <p>Class: ${className}</p>
       <div class="card-buttons">
         <button class="btn">View Marks</button>
         <button class="btn">Enter/Update Marks</button>
@@ -34,10 +40,9 @@ function renderSubjects() {
   });
 }
 
-function renderClassTeacherSection() {
-  if (teacherData.isClassTeacher) {
-    const section = document.getElementById("class-teacher-section");
-    section.classList.remove("hidden");
-    document.getElementById("class-teacher-classname").textContent = teacherData.classTeacherClass;
-  }
+function renderClassTeacherSection(className) {
+  const section = document.getElementById("class-teacher-section");
+  section.classList.remove("hidden");
+  document.getElementById("class-teacher-classname").textContent = className;
 }
+
