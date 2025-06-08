@@ -1,0 +1,91 @@
+/* === General Styles === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* === Navbar === */
+.teacher-navbar {
+  background-color: #302430; /* Thunder */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+
+/* Logo & Branding */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 40px;
+}
+
+.brand-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Hamburger (Mobile Menu Button) */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Links */
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  flex-grow: 1;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.navbar-links li a {
+  color: #e19f31; /* Fire Bush */
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 0;
+}
+
+#logout-link {
+  color: #e19f31;
+}
+
+/* === Responsive Styles === */
+@media (max-width: 980px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+    gap: 15px;
+  }
+
+  .navbar-links.show {
+    display: flex;
+  }
+
+  .navbar-links li {
+    width: 100%;
+  }
+}

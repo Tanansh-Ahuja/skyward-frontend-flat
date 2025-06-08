@@ -17,7 +17,20 @@ const msg = document.getElementById("msg");
 // Fetch user details
 async function fetchProfile() {
   try {
-    const res = await fetch(`${API_BASE_URL}/users/admin/${user.user_id}`);
+    let res = null;
+    if(user.role==='admin')
+    {
+      res = await fetch(`${API_BASE_URL}/users/admin/${user.user_id}`);
+    }
+    else if(user.role === 'teacher')
+    {
+      res = await fetch(`${API_BASE_URL}/users/teacher/${user.user_id}`);
+    }
+    if(res === null)
+    {
+      console.log("Error in fetching profile");
+      return;
+    }
     const data = await res.json();
     nameInput.value = data.name || "";
     emailInput.value = data.email || "";

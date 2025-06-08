@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teacher Dashboard</title>
+  <link rel="stylesheet" href="css_navbar_teacher.css" />
+  <link rel="stylesheet" href="css_teacher_dashboard.css" />
+</head>
+<body>
+  <!-- Navbar (you'll reuse admin version) -->
+  <div id="navbar-placeholder"></div>
+
+  <main class="dashboard-container">
+    <!-- Section 1: My Subjects -->
+    <section class="section-subjects">
+      <h2>Subjects I Teach</h2>
+      <div id="subject-teach-list" class="card-container">
+        <!-- Cards will be populated dynamically -->
+      </div>
+    </section>
+
+    <!-- Section 2: Class Teacher Section -->
+    <section id="class-teacher-section" class="section-class-teacher hidden">
+      <h2>I am the Class Teacher of <span id="class-teacher-classname">Class X</span></h2>
+      <div class="btn-group">
+        <button class="btn" id="btn-view-all-marks">View All Marks</button>
+        <button class="btn" id="btn-take-attendance">Take Attendance</button>
+        <button class="btn" id="btn-update-attendance">Update Attendance</button>
+        <button class="btn disabled" id="btn-generate-reports" disabled>Generate Reports (Coming Soon)</button>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="js_component_navbar_teacher.js"></script>
+  <script src="js_teacher_dashboard.js"></script>
+</body>
+</html>
