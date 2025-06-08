@@ -1,6 +1,7 @@
 import { API_BASE_URL } from './js_config.js';
 document.addEventListener('DOMContentLoaded', async () => {
     const token = localStorage.getItem('token');
+    const user = JSON.parse(localStorage.getItem("user"));
         if (!token) {
             window.location.href = 'login.html';
             return;
@@ -13,8 +14,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
 
             if (!verifyRes.ok) {
-            localStorage.removeItem('token');
-            localStorage.removeItem('user');
+            local_storage_remove_items();
             window.location.href = 'login.html';
             return;
             }
@@ -22,6 +22,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         catch (err) {
         console.error('Token check failed', err);
         window.location.href = 'login.html';
+    }
+    if(user.role != 'admin')
+    {
+      alert("Not authorised to view this page");
+      local_storage_remove_items();
+      window.location.href = 'login.html';
+      return;
     }
 });
 
@@ -56,8 +63,13 @@ document.addEventListener('DOMContentLoaded', async () => {
   const logoutLink = document.getElementById('logout-link');
   logoutLink.addEventListener('click', (e) => {
     e.preventDefault();
-    localStorage.removeItem('token');
-    localStorage.removeItem('user');
+    local_storage_remove_items();
     window.location.href = 'login.html';
   });
 });
+
+function local_storage_remove_items()
+{
+  localStorage.removeItem('token');
+  localStorage.removeItem('user');
+}
