@@ -1,0 +1,123 @@
+/* Overall container */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f8fa;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Dropdown & total marks */
+label {
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+#exam-type,
+#total-marks {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+}
+
+#total-marks-wrapper {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+#marks-entry-table {
+  width: 100%;
+  table-layout: fixed; /* Important for fixed widths */
+}
+
+#marks-entry-table thead th:nth-child(1),
+#marks-entry-table tbody td:nth-child(1) {
+  width: 36%;
+  text-align: left; /* Usually nicer for names */
+  padding-left: 1rem; /* Adds some breathing room */
+}
+
+#marks-entry-table thead th:nth-child(n+2),
+#marks-entry-table tbody td:nth-child(n+2) {
+  width: 22%;
+  text-align: center; /* Keep others centered */
+}
+input.grade {
+  width: 40px; /* smaller width since grades are short (e.g. A1, B2) */
+  padding: 0.3rem;
+  font-size: 0.9rem;
+  text-align: center;
+  box-sizing: border-box; /* make padding included in width */
+  background-color: #f3f3f3;
+  border: none;
+  font-weight: bold;
+  pointer-events: none; /* disable editing */
+  color: #333;
+}
+thead {
+  background-color: #eaeaea;
+}
+
+th, td {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+}
+
+th:nth-child(2), td:nth-child(2),
+th:nth-child(3), td:nth-child(3),
+th:nth-child(4), td:nth-child(4) {
+  text-align: center;
+}
+
+input[type="number"] {
+  width: 60px;
+  padding: 0.3rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+
+/* Submit Button */
+#update-btn {
+  background-color: #4caf50;
+  color: white;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  transition: background-color 0.3s ease;
+}
+
+#update-btn:hover {
+  background-color: #45a049;
+}

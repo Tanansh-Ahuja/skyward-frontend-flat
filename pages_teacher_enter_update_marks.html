@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enter/Update Marks</title>
+  <link rel="stylesheet" href="css_navbar_teacher.css" />
+  <link rel="stylesheet" href="css_teacher_enter_update_marks.css" />
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <main class="container">
+    <h2 id="page-heading"></h2>
+    <label for="exam-type">Select Exam Type:</label>
+    <select id="exam-type">
+      <option value="unit-test-1">Unit Test 1</option>
+      <option value="unit-test-2">Unit Test 2</option>
+      <option value="half-yearly">Half Yearly</option>
+      <option value="final">Final</option>
+    </select>
+
+    <div id="total-marks-wrapper">
+      <label for="total-marks">Total Marks:</label>
+      <input type="number" id="total-marks" readonly />
+    </div>
+
+    <table id="marks-entry-table">
+      <thead>
+        <tr>
+          <th>Student Name</th>
+          <th>Marks Obtained</th>
+          <th>Grade</th>
+          <th>On Leave</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <button id="submit-marks">Submit</button>
+  </main>
+
+  <script type="module" src="js_component_navbar_teacher.js"></script>
+  <script type="module" src="js_teacher_enter_update_marks.js"></script>
+</body>
+</html>
